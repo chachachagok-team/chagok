@@ -32,12 +32,12 @@
 그다음 브라우저에서 `http://127.0.0.1:8088/` 에 접속하면 기어·가속 등을 조작할 수 있습니다. 이 앱은 기어 신호로 정차·출발을 판단하므로, 시연 진행도 이 콘솔로 합니다.
 
 ### APK로 바로 설치
-APK 위치: **`apk/차곡_차곡차곡_release.apk`** (서명된 release 빌드)
+APK 위치: **`apk/차곡차곡_release.apk`** (서명된 release 빌드)
 
 Pleos Connect 에뮬레이터에 설치합니다.
 
 ```
-adb install -r "apk/차곡_차곡차곡_release.apk"
+adb install -r "apk/차곡차곡_release.apk"
 ```
 
 ### 소스에서 빌드
@@ -98,4 +98,7 @@ app/src/main/java/com/familyvoice/app/
 ├── TripUpload.kt      # 사진 QR(여행 링크) 생성
 └── VoiceRules.kt      # 동작 규칙·시연 플래그 모음
 ```
- 
+
+## APK 파일 위치 & GitHub Release 링크
+APK 파일 위치 : app/release/"app-release.apk"
+GitHub Release 링크 : https://github.com/chachachagok-team/chagok
