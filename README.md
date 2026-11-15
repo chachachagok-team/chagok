@@ -100,5 +100,5 @@ app/src/main/java/com/familyvoice/app/
 ```
 
 ## APK 파일 위치 & GitHub Release 링크
-APK 파일 위치 : app/release/"app-release.apk"
-GitHub Release 링크 : https://github.com/chachachagok-team/chagok
+-APK 파일 위치 : app/release/"app-release.apk"
+-GitHub Release 링크 : https://github.com/chachachagok-team/chagok
