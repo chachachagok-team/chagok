@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 앱 아이콘: 겹쳐 쌓인 폴라로이드(목소리·풍경) + 경유지마다 색이 바뀌는 점선 경로 -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/icon_bg" />
+    <foreground android:drawable="@mipmap/ic_launcher_art" />
+</adaptive-icon>

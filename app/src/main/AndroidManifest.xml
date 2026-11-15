@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Pleos Vehicle SDK read permissions -->
+    <uses-permission android:name="pleos.car.permission.CAR_DOORS" />
+    <uses-permission android:name="pleos.car.permission.CAR_DRIVE" />
+    <uses-permission android:name="pleos.car.permission.CAR_SPEED" />
+    <!-- 안드로이드 차량 표준으로 현재 속도를 읽어 보기 위한 권한 (없는 기기면 조용히 건너뛴다) -->
+    <uses-permission android:name="android.car.permission.CAR_SPEED" />
+    <uses-permission android:name="pleos.car.permission.CAR_MILEAGE" />
+    <uses-permission android:name="pleos.car.permission.CAR_INFO" />
+    <uses-permission android:name="pleos.car.permission.CAR_CLIMATE" />
+    <uses-permission android:name="pleos.car.permission.CAR_WINDOWS" />
+    <uses-permission android:name="pleos.car.permission.CAR_ENERGY" />
+    <uses-permission android:name="pleos.car.permission.CAR_TOLL" />
+    <uses-permission android:name="pleos.car.permission.CAR_SEATS" />
+    <uses-permission android:name="pleos.car.permission.READ_WINDSHIELD_WIPERS" />
+    <!-- Pleos 음성(TTS·STT)·LLM SDK -->
+    <!-- Pleos NaviHelper: 목적지·즐겨찾기·최근 목적지 읽기 -->
+    <uses-permission android:name="pleos.car.permission.NAVI_ROUTE" />
+    <!-- 경유지 추가 (NaviHelper addWaypoint) — 보호 수준 Normal -->
+    <uses-permission android:name="pleos.car.permission.NAVI_ROUTE_SEARCH" />
+    <uses-permission android:name="pleos.car.permission.FUSED_LOCATION" />
+    <uses-permission android:name="pleos.car.permission.TTS_SERVICE" />
+    <uses-permission android:name="pleos.car.permission.STT_SERVICE" />
+    <uses-permission android:name="pleos.car.permission.LLM_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/Theme.FamilyVoice">
+        <!-- 차량 표준 API. 없는 기기에서도 설치되도록 required="false" -->
+        <uses-library android:name="android.car" android:required="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.FamilyVoice"
+            android:windowSoftInputMode="adjustResize">
+            <!--
+              주행 중에도 화면을 쓸 수 있다고 선언한다 (Android Automotive 운전 방해 차단).
+              없으면 D 기어에서 "주행 중에는 사용할 수 없습니다" 안내가 화면을 덮는다.
+              차곡차곡은 주행 중에 조작을 요구하지 않고 '지나온 길'만 보여 주므로 이 선언에 맞다.
+            -->
+            <meta-data
+                android:name="distractionOptimized"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
