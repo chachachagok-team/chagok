@@ -22,3 +22,4 @@ local.properties
 
 # 차곡차곡 업로드 서버 관리자 키 (각자 로컬에만 둠)
 app/src/main/assets/appsscript_key.txt
+.idea/

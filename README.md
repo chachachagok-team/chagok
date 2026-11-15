@@ -99,6 +99,6 @@ app/src/main/java/com/familyvoice/app/
 └── VoiceRules.kt      # 동작 규칙·시연 플래그 모음
 ```
 
-## APK 파일 위치 & GitHub Release 링크
-- APK 파일 위치 : app/release/"app-release.apk"
-- GitHub Release 링크 : https://github.com/chachachagok-team/chagok
+## APK 파일 위치
+- `apk/차곡_차곡차곡_release.apk` (서명된 release 빌드, 사진 QR 키 포함)
+- 저장소: https://github.com/chachachagok-team/chagok
